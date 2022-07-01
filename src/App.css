@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,100&family=Merriweather:ital,wght@1,300;1,400&family=Poppins:ital,wght@1,400;1,700&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #a2c3b2;
+  background-image: url("./images/topography.svg");
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a,
+h1,
+h2,
+h3,
+span,
+p {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:hover,
+input:active,
+input:focus {
+  outline-style: solid;
+  border: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Mobile */
+.Header {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.Header img {
+  width: 100%;
+}
+.Header .Header-Overlay {
+  position: absolute;
+  text-align: left;
+  top: 0;
   color: white;
+  font-size: 0.9em;
+  z-index: 2;
+}
+.Header .Header-Overlay h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 #a2c3b2, 3px 3px 0 black;
+}
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+}
+.SearchBar input {
+  height: 30px;
+  width: 50%;
+  border-radius: 10px;
+  border: #0d1215 1px solid;
+  padding: 0 10px;
+  background-color: #e6dbce;
 }
 
-.App-link {
-  color: #61dafb;
+.articleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.articleContainer .articleCard {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: black;
+  width: 300px;
+  min-height: 75px;
+  padding: 10px;
+  background-color: #e6dbce;
+  box-shadow: -2px 2px 2px #0d1215;
+  border-radius: 15px;
+}
+.articleContainer hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 2px;
+  background-color: #0d1215;
+  margin: 5px 0;
+}
+
+.articleContainer .articleCard .articleCard-title {
+  font-size: 1.3em;
+}
+.articleContainer .articleCard .articleCard-date {
+  font-size: 0.9em;
+}
+.articleContainer .articleCard .articleCard-summary {
+  font-size: 0.8em;
+  opacity: 0.95;
+}
+
+.articleContainer .articleCard:hover,
+.articleContainer .articleCard:active {
+  background-color: #d7c6b1;
+}
+
+.data404 {
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-shadow: 0 1px 0 #f75d5d, 0 2px 0 black, 0 3px 0 #f75d5d, 0 4px 0 black,
+    0 5px 0 #f75d5d, 0 6px 0 black;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+  .Header .Header-Overlay {
+    font-size: 3em;
   }
-  to {
-    transform: rotate(360deg);
+  .Header .Header-Overlay h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    text-shadow: 1px 1px 0 black, 2px 2px 0 #a2c3b2, 3px 3px 0 black;
   }
 }
