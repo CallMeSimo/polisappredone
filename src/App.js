@@ -1,45 +1,49 @@
 import { useEffect, useState } from "react";
 
-import ArticleCard from "./ArticleCard.jsx";
-import Header from "./Header";
+import ArticleCard from "./components/ArticleCard.jsx";
+import Header from "./components/Header";
 
 import "./App.css";
 import searchIcon from "./images/search.svg";
 
+import Categories from "./components/categories.js";
+import Type from "./components/Type.jsx";
+
 const App = () => {
   const [jsonData, setJsonData] = useState([]);
   const [searchQuery, setSearchQuery] = useState([]);
+  const [category, setCategory] = useState([]);
 
-  //   THIS IS FOR REFRENCE
-  //   id: 348267,
-  //   datetime: "2022-07-01 12:40:36 +02:00",
-  //   name: "01 juli 11:08, Trafikolycka, personskada, Enköping",
-  //   summary: "Man till sjukhus efter trafikolycka.",
-  //   url: "/aktuellt/handelser/2022/juli/1/01-juli-1108-trafikolycka-personskada-enkoping/",
-  //   type: "Trafikolycka, personskada",
-  //   location: {
-  //     name: "Enköping",
-  //     gps: "59.635691,17.077823",
+  let allTypes = document.querySelectorAll(".type");
+  allTypes.forEach((element) => {
+    element.addEventListener("click", () => {
+      setCategory(element.id);
+    });
+  });
 
-  const fetchApi = async (query) => {
+  const fetchCity = async (query) => {
     const response = await fetch(
       `https://polisen.se/api/events?locationname=${query}`
     );
     const apiData = await response.json();
     setJsonData(apiData);
-    console.log(apiData);
     console.log(jsonData);
   };
 
   //  On page load
   useEffect(() => {
-    fetchApi("");
-  }, []);
+    fetchCity(searchQuery);
+  }, [searchQuery]);
 
   return (
     <div>
       <Header />
       <div>
+        {/* {Categories.map((type) => ( //in development
+          <div className="categoryList">
+            <Type type={type} />
+          </div>
+        ))} */}
         <div className="SearchBar">
           {" "}
           <input
@@ -52,15 +56,20 @@ const App = () => {
           <img
             src={searchIcon}
             onClick={() => {
-              fetchApi(searchQuery);
+              fetchCity(searchQuery);
             }}
           />
         </div>
         {jsonData.length > 0 ? (
           <div className="articleContainer">
-            {jsonData.map((article) => (
-              <ArticleCard article={article} />
-            ))}
+            {jsonData.map(
+              (article) =>
+                (article.type = category ? (
+                  <ArticleCard article={article} />
+                ) : (
+                  console.log(category + " VS " + article)
+                ))
+            )}
           </div>
         ) : (
           <div className="data404">

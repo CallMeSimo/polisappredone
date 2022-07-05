@@ -1,11 +1,13 @@
 import React from "react";
+// import VantaJs from "./Vanta";
 
-import headerImage from "./images/headerImage2.png";
-import overlaybackground from "./images/overlaybackground.png";
+import headerImage from "../images/headerImage2.png";
 
 const Header = () => {
   return (
     <div className="Header">
+      <div id="test"></div>
+      {/* <VantaJs /> */}
       <img src={headerImage} />
       <div className="Header-Overlay">
         <h2>Stay updated. Stay informed.</h2>
