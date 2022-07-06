@@ -4,7 +4,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #a2c3b2;
+  background-color: #4b4453;
   background-image: url("./images/topography.svg");
   font-family: "Poppins", sans-serif;
 }
@@ -30,25 +30,92 @@ input:focus {
 
 /* Mobile */
 .Header {
+  position: relative;
   width: 100%;
+  height: 85vh;
   display: flex;
-  justify-content: center;
+  margin-bottom: 45px;
 }
-.Header img {
+.Header .vanta {
   width: 100%;
+}
+.Header canvas {
+  box-shadow: 0 0 15px black;
 }
 .Header .Header-Overlay {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  text-align: left;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   color: white;
   font-size: 0.9em;
+
   z-index: 2;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black;
 }
-.Header .Header-Overlay h1 {
-  font-size: 2em;
-  font-weight: bolder;
-  text-shadow: 1px 1px 0 black, 2px 2px 0 #a2c3b2, 3px 3px 0 black;
+
+.Header .Header-Overlay .Header-Overlay-Content {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 25px;
+  backdrop-filter: blur(1px);
+}
+
+.Header .Header-Overlay * {
+  /* font-size: 2em; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.Header .Header-Overlay p {
+  opacity: 0.75;
+}
+.Header .Header-Overlay h3 {
+  font-weight: 500;
+}
+.categoryContainer .categoryButton {
+  width: 25px;
+  height: 25px;
+  margin-left: 25%;
+}
+.categoryContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  backdrop-filter: blur(5px);
+}
+.categoryContainer .categoryList {
+  margin: auto;
+  width: 75%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  padding: 5px 25px;
+}
+
+.categoryList .type {
+  display: flex;
+}
+.categoryList .type button {
+  background-color: #251929;
+  color: white;
+  box-shadow: 0 0 2px black;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  width: 175px;
+  min-height: 50px;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .SearchBar {
   display: flex;
@@ -76,11 +143,11 @@ input:focus {
   font-size: 0.8em;
   font-weight: bold;
   color: black;
-  width: 300px;
+  width: 280px;
   min-height: 75px;
   padding: 10px;
-  background-color: #e6dbce;
-  box-shadow: -2px 2px 2px #0d1215;
+  background-color: #d6e5eb;
+  box-shadow: -2px 2px 2px #282919;
   border-radius: 15px;
 }
 .articleContainer hr {
@@ -119,12 +186,36 @@ input:focus {
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
-  .Header .Header-Overlay {
-    font-size: 3em;
+  .Header .vanta {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
   }
-  .Header .Header-Overlay h1 {
+  .Header .Header-Overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2em;
+    color: white;
     font-size: 2em;
-    font-weight: bolder;
-    text-shadow: 1px 1px 0 black, 2px 2px 0 #a2c3b2, 3px 3px 0 black;
+
+    z-index: 2;
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black;
+  }
+
+  .Header .Header-Overlay * {
+    padding-left: 10%;
+    /* font-size: 2em; */
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+  }
+  .Header .Header-Overlay p {
+    opacity: 0.75;
+  }
+  .Header .Header-Overlay h3 {
+    font-weight: 500;
   }
 }

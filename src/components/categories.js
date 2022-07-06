@@ -1,10 +1,27 @@
 const Categories = [
+  "none",
   "Alkohollagen",
   "Anträffad död",
   "Arbetsplatsolycka",
   "Bedrägeri",
   "Bombhot",
   "Brand",
+  "Brand",
+  "Brand automatlarm",
+  "Bråk",
+  "Detonation",
+  "Djur skadat/omhändertaget",
+  "Ekobrott",
+  "Farligt föremål, misstänkt",
+  "Fjällräddning",
+  "Fylleri/LOB",
+  "Förfalskningsbrott",
+  "Försvunnen person",
+  "Gränskontroll",
+  "Häleri",
+  "Inbrott",
+  "Inbrott, försök",
+  "Knivlagen",
 ];
 
 export default Categories;
