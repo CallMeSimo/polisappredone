@@ -1,8 +1,17 @@
-const Type = ({ type }) => {
+const Type = ({ type, setCategoryListToggled, setCategory }) => {
   return (
     <div className="type">
-      <input id={type} data-id={type} type="button"></input>
-      <span>{type}</span>
+      <button
+        id={type}
+        data-id={type}
+        onClick={() => {
+          setCategoryListToggled(false);
+          setCategory(type);
+          console.log(type);
+        }}
+      >
+        {type}
+      </button>
     </div>
   );
 };
