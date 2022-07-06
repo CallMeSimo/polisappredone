@@ -4,7 +4,9 @@ import ArticleCard from "./components/ArticleCard.jsx";
 import Header from "./components/Header";
 
 import "./App.css";
-import searchIcon from "./images/search.svg";
+
+import Button from "@mui/material/Button";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import Categories from "./components/categories.js";
 import Type from "./components/Type.jsx";
@@ -44,6 +46,7 @@ const App = () => {
     setJsonData(apiData);
   };
 
+  // Rule for the category menu button, true = open, false = close
   const categoryToggle = () => {
     setCategoryListToggled(!categoryListToggled);
   };
@@ -78,9 +81,17 @@ const App = () => {
       <Header />
       <div>
         <div className="categoryContainer">
-          <button onClick={categoryToggle} className="categoryButton" />
+          <Button
+            startIcon={<MenuIcon />}
+            size="larger"
+            onClick={categoryToggle}
+            className="categoryButton"
+          />
           {/* Appends the categoryies HERE  */}
-          <p>Note: some tags do not work yet!</p>
+          {/* Remove the <p> when issue is fixed.*/}
+          <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; Note: some tags do not work yet!
+          </p>{" "}
           <div className="categoryList">
             {categoryListToggled ? (
               Categories.map((type) => (

@@ -4,7 +4,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #4b4453;
+  background-color: #192329;
   background-image: url("./images/topography.svg");
   font-family: "Poppins", sans-serif;
 }
@@ -24,7 +24,7 @@ p {
 input:hover,
 input:active,
 input:focus {
-  outline-style: solid;
+  outline-style: none;
   border: 0;
 }
 
@@ -77,17 +77,20 @@ input:focus {
 .Header .Header-Overlay h3 {
   font-weight: 500;
 }
-.categoryContainer .categoryButton {
-  width: 25px;
-  height: 25px;
-  margin-left: 25%;
-}
 .categoryContainer {
   color: white;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 15px auto;
   backdrop-filter: blur(5px);
+  background-color: #191828;
+  border-radius: 35px;
+}
+.categoryContainer .categoryButton {
+  width: min-content;
+  height: 50px;
+  margin-left: 2%;
 }
 .categoryContainer .categoryList {
   margin: auto;
@@ -98,24 +101,29 @@ input:focus {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 20px;
-  padding: 5px 25px;
+  padding: 25px 25px;
 }
 
 .categoryList .type {
   display: flex;
 }
 .categoryList .type button {
+  word-break: break-all;
   background-color: #251929;
   color: white;
   box-shadow: 0 0 2px black;
   border: none;
   border-radius: 15px;
   padding: 5px 10px;
-  width: 175px;
+  width: 105px;
   min-height: 50px;
   text-align: left;
   font-weight: bold;
   letter-spacing: 1px;
+}
+.categoryList .type button:hover {
+  background-color: white;
+  color: black;
 }
 .SearchBar {
   display: flex;
@@ -124,11 +132,11 @@ input:focus {
 }
 .SearchBar input {
   height: 30px;
-  width: 50%;
+  max-width: 450px;
   border-radius: 10px;
-  border: #0d1215 1px solid;
+  border: #191828 5px solid;
   padding: 0 10px;
-  background-color: #e6dbce;
+  background-color: #d6e5eb;
 }
 
 .articleContainer {
@@ -199,10 +207,19 @@ input:focus {
     justify-content: center;
     line-height: 2em;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
 
     z-index: 2;
     text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black;
+  }
+
+  .Header .Header-Overlay .Header-Overlay-Content {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px;
+    backdrop-filter: blur(0px);
   }
 
   .Header .Header-Overlay * {
@@ -217,5 +234,19 @@ input:focus {
   }
   .Header .Header-Overlay h3 {
     font-weight: 500;
+  }
+  .categoryList .type button {
+    word-break: break-all;
+    background-color: #251929;
+    color: white;
+    box-shadow: 0 0 2px black;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 175px;
+    min-height: 50px;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 }
