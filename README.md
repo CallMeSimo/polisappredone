@@ -1,4 +1,4 @@
-https://crimewatch.netlify.app/
+<h2>https://crimewatch.netlify.app/</h2>
 
 Redo of my first react (team) project, polis app!
 
@@ -8,7 +8,7 @@ I was not satisfied with how I performed on that project so I challanged myself 
   - MUCH better understanding of functionalities (useStates, useEffects, ReactDom...)
 
 <h1> What is this?</h1>
-<p>This app can search the name of Swedish cities and recall crimes that has occured there with a props including:</p>
+<p>This app can search the name of Swedish cities and recall crimes that has occured there with props including:</p>
 
   - Title
   - Date
