@@ -28,7 +28,46 @@ input:focus {
   border: 0;
 }
 
+/* Remoev this after fix */
+.warning {
+  font-size: 0.5em;
+  margin: 0;
+  padding: 0;
+}
+
 /* Mobile */
+.Navbar {
+  background-color: #2dd4bf;
+  width: 100%;
+  height: 5vh;
+  position: sticky;
+  top: 0;
+  color: white;
+  z-index: 5;
+  box-shadow: 0 5px 10px black;
+}
+.Navbar .NavbarContent {
+  /* background-color: #2dd4bf; */
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.Navbar .NavbarContent .sources {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 150px;
+  margin: auto 0;
+}
+
+.Navbar .NavbarContent .sources a {
+  background-color: #f75d5d;
+  border-radius: 35px;
+  padding: 0 5px 8px 5px;
+  height: 15px;
+}
+.Navbar .NavbarContent .sources a img {
+  height: 15px;
+}
 .Header {
   position: relative;
   width: 100%;
@@ -53,7 +92,7 @@ input:focus {
   font-size: 0.9em;
 
   z-index: 2;
-  text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black;
+  text-shadow: 1px 1px 0 black, 2px 2px 3px #2dd4bf, 3px 3px 0 black;
 }
 
 .Header .Header-Overlay .Header-Overlay-Content {
@@ -78,14 +117,15 @@ input:focus {
   font-weight: 500;
 }
 .categoryContainer {
+  box-shadow: 5px 2px #2dd4bf;
   color: white;
+  width: 80%;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
   margin: 15px auto;
   backdrop-filter: blur(5px);
   background-color: #191828;
-  border-radius: 35px;
 }
 .categoryContainer .categoryButton {
   width: min-content;
@@ -95,13 +135,14 @@ input:focus {
 .categoryContainer .categoryList {
   margin: auto;
   width: 75%;
+  height: auto;
   color: white;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 20px;
-  padding: 25px 25px;
+  padding: 5px 0px;
 }
 
 .categoryList .type {
@@ -109,17 +150,17 @@ input:focus {
 }
 .categoryList .type button {
   word-break: break-all;
-  background-color: #251929;
-  color: white;
+  background-color: #2dd4bf;
+  color: black;
   box-shadow: 0 0 2px black;
   border: none;
-  border-radius: 15px;
   padding: 5px 10px;
   width: 105px;
-  min-height: 50px;
+  min-height: 25px;
   text-align: left;
   font-weight: bold;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .categoryList .type button:hover {
   background-color: white;
@@ -128,15 +169,22 @@ input:focus {
 .SearchBar {
   display: flex;
   justify-content: center;
-  height: 35px;
+  height: 25px;
 }
 .SearchBar input {
-  height: 30px;
-  max-width: 450px;
+  height: 10px;
+  max-width: 50px;
   border-radius: 10px;
   border: #191828 5px solid;
   padding: 0 10px;
   background-color: #d6e5eb;
+
+  transition: all ease 0.25s;
+}
+
+.SearchBar input:focus {
+  height: 30px;
+  max-width: 150px;
 }
 
 .articleContainer {
@@ -155,8 +203,7 @@ input:focus {
   min-height: 75px;
   padding: 10px;
   background-color: #d6e5eb;
-  box-shadow: -2px 2px 2px #282919;
-  border-radius: 15px;
+  box-shadow: 5px 2px #2dd4bf;
 }
 .articleContainer hr {
   margin: 0;
@@ -169,6 +216,8 @@ input:focus {
 
 .articleContainer .articleCard .articleCard-title {
   font-size: 1.3em;
+  background-color: #2dd4bf;
+  border-radius: 5px;
 }
 .articleContainer .articleCard .articleCard-date {
   font-size: 0.9em;
@@ -207,15 +256,14 @@ input:focus {
     justify-content: center;
     line-height: 2em;
     color: white;
-    font-size: 1.5em;
-
+    font-size: 3em;
     z-index: 2;
-    text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black;
+    text-shadow: 1px 1px 0 black, 2px 2px 3px #2dd4bf, 3px 3px 0 black;
   }
 
   .Header .Header-Overlay .Header-Overlay-Content {
     display: flex;
-    width: auto;
+    width: min-content;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 25px;
@@ -223,7 +271,7 @@ input:focus {
   }
 
   .Header .Header-Overlay * {
-    padding-left: 10%;
+    padding-left: 3%;
     /* font-size: 2em; */
     display: flex;
     justify-content: flex-start;
@@ -237,16 +285,21 @@ input:focus {
   }
   .categoryList .type button {
     word-break: break-all;
-    background-color: #251929;
-    color: white;
-    box-shadow: 0 0 2px black;
-    border: none;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: 175px;
+    min-width: 155px;
     min-height: 50px;
-    text-align: left;
-    font-weight: bold;
     letter-spacing: 1px;
+  }
+  .Navbar .NavbarContent .sources {
+    min-width: 250px;
+    font-weight: bolder;
+  }
+  .Navbar .NavbarContent .sources a {
+    background-color: #f75d5d;
+    border-radius: 35px;
+    padding: 5px;
+    height: 25px;
+  }
+  .Navbar .NavbarContent .sources a img {
+    height: 25px;
   }
 }

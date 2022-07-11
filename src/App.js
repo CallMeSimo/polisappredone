@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import ArticleCard from "./components/ArticleCard.jsx";
 import Header from "./components/Header";
+import Navbar from "./components/Navbar.jsx";
 
 import "./App.css";
 
@@ -11,9 +12,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Categories from "./components/categories.js";
 import Type from "./components/Type.jsx";
 
-import * as THREE from "three";
-
-import BIRDS from "vanta/dist/vanta.birds.min.js";
 const App = () => {
   // Getter Setter for categoryListToggled
   const [categoryListToggled, setCategoryListToggled] = useState(false);
@@ -78,20 +76,18 @@ const App = () => {
 
   return (
     <div>
+      <Navbar />
       <Header />
       <div>
         <div className="categoryContainer">
           <Button
             startIcon={<MenuIcon />}
             size="larger"
+            color="inherit"
             onClick={categoryToggle}
             className="categoryButton"
           />
           {/* Appends the categoryies HERE  */}
-          {/* Remove the <p> when issue is fixed.*/}
-          <p>
-            &nbsp; &nbsp; &nbsp; &nbsp; Note: some tags do not work yet!
-          </p>{" "}
           <div className="categoryList">
             {categoryListToggled ? (
               Categories.map((type) => (

@@ -16,7 +16,6 @@ const Header = () => {
           el: vantaRef.current,
           THREE,
           color: 0xff0040,
-
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
