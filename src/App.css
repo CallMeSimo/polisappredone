@@ -360,6 +360,49 @@ input:focus {
 	}
 	
 }
+@media only screen and (min-width: 1200px) {
+
+  .Header .vanta {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+  }
+  .Header .Header-Overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2em;
+    color: white;
+    font-size: 3em;
+    z-index: 2;
+  }
+
+  .Header .Header-Overlay .Header-Overlay-Content {
+    display: flex;
+    width: min-content;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px;
+    backdrop-filter: blur(0px);
+  }
+
+  .Header .Header-Overlay * {
+    padding-left: 3%;
+    /* font-size: 2em; */
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+  }
+  .Header .Header-Overlay p {
+    opacity: 0.75;
+  }
+  .Header .Header-Overlay h3 {
+    font-weight: 500;
+  }
+
+}
 
 .footer {
   position: relative;
