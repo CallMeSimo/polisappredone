@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import ArticleCard from "./components/ArticleCard.jsx";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar.jsx";
+import Chart from "./components/Chart.jsx";
+import Footer from "./components/Footer.jsx";
 
 import "./App.css";
 
@@ -13,6 +15,7 @@ import Categories from "./components/categories.js";
 import Type from "./components/Type.jsx";
 
 const App = () => {
+	
   // Getter Setter for categoryListToggled
   const [categoryListToggled, setCategoryListToggled] = useState(false);
 
@@ -56,6 +59,8 @@ const App = () => {
   useEffect(() => {
     fetchCity(searchQuery);
   }, [category]);
+  
+
 
   // THIS is for vanta.
   // Creates the NECESSARY elements attrb it needs.
@@ -75,7 +80,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="World">
       <Navbar />
       <Header />
       <div>
@@ -130,6 +135,13 @@ const App = () => {
           </div>
         )}
       </div>
+	  <div className="Statistics">
+		<Chart CityData={jsonData}/>
+	  </div>
+	  <div className="Featured">
+		<h3> WORK IN <span>PROGRESS</span></h3>
+	  </div>
+		<Footer/>
     </div>
   );
 };
