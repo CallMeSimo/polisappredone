@@ -81,6 +81,46 @@ const App = () => {
 
   return (
     <div className="World">
+	<div className="experimentalArt">
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  <span>CallMeSimo</span>
+	  </div>
       <Navbar />
       <Header />
       <div>
@@ -110,7 +150,7 @@ const App = () => {
         <div className="SearchBar">
           {" "}
           <input
-            placeholder="Search CITY here"
+            placeholder="🔎"
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);
@@ -139,9 +179,33 @@ const App = () => {
 		<Chart CityData={jsonData}/>
 	  </div>
 	  <div className="Featured">
-		<h3> WORK IN <span>PROGRESS</span></h3>
+		<h3> <span>R</span><span>e</span><span>a</span><span>l</span> <span>t</span><span>i</span><span>m</span><span>e</span> <colored>update</colored> <span>f</span><span>r</span><span>o</span><span>m</span> <colored>official</colored> <span>API</span></h3>
+		<div className="FeaturedDescription">
+			<p>In today's fast-paced digital world,
+			staying up-to-date with the latest information is crucial. One of the most 
+			reliable and efficient ways to receive real-time updates is through an 
+			official API (Application Programming Interface). An API acts as a bridge between
+			different software systems, allowing them to communicate and share data seamlessly. When 
+			an official API is utilized, the information received is directly from the source, ensuring
+			accuracy and reliability.
+			<br/><br/><br/>
+			Real-time updates from an official 
+			API provide users with the most current data available, without 
+			delays or manual input. This means that any changes or modifications made to the source
+			data are reflected instantly, allowing for timely decision-making and informed actions. Whether it's
+			financial data, weather updates, social media feeds, or any other type of dynamic information,
+			an official API can deliver the most up-to-date data in a matter of seconds.
+			<br/><br/><br/>
+			Using an official API for real-time updates
+			also ensures data integrity and security. Official APIs are 
+			developed and maintained by authorized sources, following industry-standard 
+			protocols and security measures. This helps to protect against unauthorized access, data breaches, 
+			and tampering of information. Users can trust that the data received from an official API is accurate,
+			reliable, and secure, making it a trustworthy source for real-time updates.</p>
+		</div>
 	  </div>
 		<Footer/>
+		
     </div>
   );
 };

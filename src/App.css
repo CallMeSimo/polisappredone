@@ -4,7 +4,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #192329;
+  background-color: #040312;
   background-image: url("./images/topography.svg");
   font-family: "Poppins", sans-serif;
   
@@ -43,7 +43,7 @@ input:focus {
 
 /* Mobile */
 .Navbar {
-  background-color: #191828;
+  background-color: #040312;
   width: 100%;
   height: 5vh;
   position: sticky;
@@ -130,7 +130,7 @@ input:focus {
   flex-direction: column;
   margin: 15px auto;
   backdrop-filter: blur(5px);
-  background-color: #191828;
+  background-color: #040312;
 }
 .categoryContainer .categoryButton {
   width: min-content;
@@ -179,10 +179,9 @@ input:focus {
 .SearchBar input {
   height: 10px;
   max-width: 50px;
-  border-radius: 10px;
-  border: #191828 5px solid;
+  border: #040312 5px solid;
   padding: 0 10px;
-  background-color: #d6e5eb;
+  background-color: white;
 
   transition: all ease 0.25s;
 }
@@ -212,7 +211,7 @@ input:focus {
   width: 95%;
   height: 25px;
   padding: 10px;
-  background-color: #040D13;
+  background-color: #040312;
   box-shadow: 5px 2px #2dd4bf;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -248,18 +247,38 @@ input:focus {
 }
 
 .Featured{
-	height: 550px;
+	height: 750px;
 	color:white;
 	width:100%;
 }
 .Featured h3{
-	margin-left:45%;
-	margin-top:25%;
+	margin-left:5%;
+	margin-top:1%;
 	font-size:5em;
 }
-.Featured h3 span{
+.Featured h3 colored{
 	color:#DC143C;
+	text-shadow: 10px 15px black;
 }
+.Featured h3 span{
+	display:inline-block;
+}
+.Featured h3 span:hover{
+	color:pink;
+	-webkit-transform:rotate(10deg);
+   -moz-transform:rotate(10deg);
+   -o-transform:rotate(10deg);
+}
+	
+.Featured .FeaturedDescription{
+	color:white;
+	width:50%;
+	margin: 0 0 0 200px;
+	background-color:#040312;
+	font-size:1.2em;
+	padding: 25px;
+}
+
 
 /* .Footer{ */
 	/* height: 250px; */
@@ -277,12 +296,29 @@ input:focus {
 }
 
 .Statistics{
-	margin-top:55px;
-	padding:75px;
 	display:flex;
 	justify-content:row;
-	height:550px;
-	background-color:#040D13;
+	height:900px; /* Same as svg height */
+	background-image: url("./images/Statisticbgv2.png");
+	background-repeat: repeat-x;
+	background-repeat: repeat-x;
+	z-index:3;
+	position: relative
+}
+
+
+.experimentalArt{
+	color:#DC143C;
+	text-shadow: 10px 15px black;
+	position:absolute;
+	font-size:2em;
+	height:100vh;
+	z-index:0;
+	margin-top:600px;
+	right:0;
+	display:flex;
+	flex-direction:column;
+	line-height:35px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -298,34 +334,33 @@ input:focus {
 	  margin-top: 25px;
 	  -webkit-mask-image: linear-gradient(0deg, transparent 0px, black 100px);
 	}
+	
+	
 	.articleContainer .articleCard {
-	  font-size: 0.8em;
-	  font-weight: bold;
-	  color: white;
-	  width: 100%;
-	  height: 50px;
-	  padding: 0px;
-	  background-color: #040D13;
-	  box-shadow: 5px 2px #2dd4bf;
-	  display: grid;
-	  grid-template-columns: 75px 1fr 1fr 1fr;
-	  gap: 5px;
+		font-size: 0.8em;
+		font-weight: bold;
+		color: white;
+		width: 95%;
+		height: 25px;
+		padding: 10px;
+		background-color: #040312;
+		box-shadow: 5px 2px #2dd4bf;
+		display: grid;
+		grid-template-columns: 95px 50px 25px  25px ;
+		gap: 25px;
 	  
 	}
 	
 	.articleContainer .articleCard .articleCard-title {
-		margin: auto;
 	  font-size: 1em;
 	  background-color: #2dd4bf;
 	  border-radius: 5px;
 	}
 	.articleContainer .articleCard .articleCard-date {
-		margin: auto;
-	  font-size: 0.6em;
+	  font-size: 0.8em;
 	}
 	.articleContainer .articleCard .articleCard-summary {
-		margin: auto;
-	  font-size: 0.6em;
+	  font-size: 0.8em;
 	  opacity: 0.95;
 	 
 	}
@@ -346,19 +381,40 @@ input:focus {
 	
 	
 	.Featured{
-		height: 550px;
+	height:100%;
 		color:white;
 		width:100%;
 	}
 	.Featured h3{
 		margin-left:5%;
-		margin-top:25%;
+		margin-top:1%;
 		font-size:4em;
+		white-space: break-spaces;
+
+	}
+	.Featured h3 colored{
+		color:#DC143C;
+		text-shadow: 10px 15px black;
 	}
 	.Featured h3 span{
-		color:#DC143C;
+		display:inline-block;
 	}
 	
+	.Featured .FeaturedDescription{
+	color:white;
+	width:75%;
+	height:100%;
+	margin: 0 0 0 20px;
+	background-color:#040312;
+	font-size:1em;
+	padding: 25px;
+}
+
+	
+  .experimentalArt{
+	display: none;
+  }
+
 }
 @media only screen and (min-width: 1200px) {
 
@@ -402,13 +458,16 @@ input:focus {
     font-weight: 500;
   }
 
+
+
 }
 
 .footer {
   position: relative;
+  margin-top:200px;
   width: 100%;
   background: #3586ff;
-  min-height: 100px;
+  min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -517,4 +576,8 @@ input:focus {
   100% {
     background-positon-x: 0px;
   }
+  
+
+  
 }
+

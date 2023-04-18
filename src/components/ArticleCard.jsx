@@ -9,7 +9,7 @@ const ArticleCard = ({ article }) => {
 			  <span>{article.name.split(",")[1].replace(/ /g, "")}</span>
 			</div>
 			<div className="articleCard-summary">
-			  <span>{article.name.split(",")[2].replace(/ /g, "")}</span>
+			  <span>{article.location.name}</span>
 			</div>
 			<div className="articleCard-date">
 			  <span>{article.datetime.slice(5, 11)}</span>
