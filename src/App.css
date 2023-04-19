@@ -209,7 +209,7 @@ input:focus {
   font-weight: bold;
   color: white;
   width: 95%;
-  height: 25px;
+  min-height: 25px;
   padding: 10px;
   background-color: #040312;
   box-shadow: 5px 2px #2dd4bf;
@@ -239,6 +239,11 @@ input:focus {
   font-size: 0.8em;
   opacity: 0.95;
  
+}
+
+.articleContainer .articleCard .articleCard-title:after {
+	content:"\A";
+	white-space:pre;
 }
 
 .articleContainer .articleCard:hover,
@@ -296,6 +301,7 @@ input:focus {
 }
 
 .Statistics{
+	padding-top:50px;
 	display:flex;
 	justify-content:row;
 	height:900px; /* Same as svg height */
@@ -341,18 +347,18 @@ input:focus {
 		font-weight: bold;
 		color: white;
 		width: 95%;
-		height: 25px;
+		height: 20px;
 		padding: 10px;
 		background-color: #040312;
 		box-shadow: 5px 2px #2dd4bf;
 		display: grid;
-		grid-template-columns: 95px 50px 25px  25px ;
-		gap: 25px;
+		grid-template-columns: 95px 65px 45px  25px ;
+		gap: 5px;
 	  
 	}
 	
 	.articleContainer .articleCard .articleCard-title {
-	  font-size: 1em;
+	  font-size: 0.8em;
 	  background-color: #2dd4bf;
 	  border-radius: 5px;
 	}
@@ -361,13 +367,12 @@ input:focus {
 	}
 	.articleContainer .articleCard .articleCard-summary {
 	  font-size: 0.8em;
-	  opacity: 0.95;
 	 
 	}
 	
 	.Statistics{
-		margin-top:55px;
-		padding:5px;
+		margin:55px 0 0 0;
+		padding:35px;
 		display:flex;
 		justify-content:row;
 		height:550px;

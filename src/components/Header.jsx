@@ -22,10 +22,10 @@ const Header = () => {
           minHeight: 200.0,
           minWidth: 200.0,
           scale: 1.0,
-          scaleMobile: 1,
+          scaleMobile: 0,
           backgroundColor: 0x191828,
           points: 8.0,
-          maxDistance: 20.0,
+          maxDistance: 15.0,
           spacing: 15.0,
         })
       );

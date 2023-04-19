@@ -1,12 +1,16 @@
 import React from "react";
 
 const ArticleCard = ({ article }) => {
+	
+	let ArticleTitle = article.name.split(",")[1].replace(/ /g, "");
+	ArticleTitle = ArticleTitle.replace('/', '/ ');
+	
   return (
     
       <a href={`https://polisen.se${article.url}`}>
 		  <div className="articleCard">
 			<div className="articleCard-title">
-			  <span>{article.name.split(",")[1].replace(/ /g, "")}</span>
+			  <span>{ArticleTitle}</span>
 			</div>
 			<div className="articleCard-summary">
 			  <span>{article.location.name}</span>
