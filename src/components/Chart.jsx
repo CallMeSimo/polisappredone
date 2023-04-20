@@ -50,7 +50,7 @@ const Chart = ({ CityData }) => {
         <XAxis dataKey="name" stroke="white" />
         <YAxis label={{ value: 'Reports', angle: -90 }} />
         <Bar isAnimationActive={false} dataKey="c1" fill="#14AEA0">
-          <LabelList dataKey="c1" position="insideTop" fill="white" angle="45" formatter={formatDataKey} />
+          <LabelList dataKey="c1" position="insideTop" fill="white" formatter={formatDataKey} />
         </Bar>
       </BarChart>
     </div>

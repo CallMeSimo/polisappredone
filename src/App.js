@@ -32,7 +32,7 @@ const App = () => {
   const categoryToggle = () => {
     setCategoryListToggled((prevState) => !prevState);
   };
-
+  
   useEffect(() => {
     fetchCity(searchQuery);
   }, [searchQuery, category]);
@@ -55,7 +55,7 @@ const App = () => {
       <Navbar />
       <Header />
       <div>
-        <div className="categoryContainer">
+	  {/*<div className="categoryContainer">
           <Button
             startIcon={<MenuIcon />}
             size="larger"
@@ -74,8 +74,9 @@ const App = () => {
                 />
               ))}
           </div>
-        </div>
+	  </div> */}
         <div className="SearchBar">
+			<span> City here!</span>
           <input
 		  placeholder="🔎"
 		  value={searchQuery}
@@ -84,7 +85,6 @@ const App = () => {
 		  }}
 		  onKeyDown={(e) => fetchCity(searchQuery, e)}
 			/>
-
         </div>
         {jsonData.length > 0 ? (
           <div className="articleContainer">
